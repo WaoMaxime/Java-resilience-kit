@@ -1,16 +1,11 @@
-package dev.mastery.java_resilience_kit;
+package dev.mastery.java_resilience_kit.resilience;
 
-import dev.mastery.java_resilience_kit.resilience.RetryPolicy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
-@SpringBootTest
-class JavaResilienceKitApplicationTests {
-
+class RetryPolicyTest {
 	@Test
 	void shouldCreatePolicyWithDefaults(){
 		RetryPolicy policy = RetryPolicy.builder().build();
@@ -103,5 +98,4 @@ class JavaResilienceKitApplicationTests {
 
 		Assertions.assertNotEquals(policyA,policyB);
 	}
-
 }
